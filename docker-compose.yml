@@ -4,10 +4,10 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-        - MYSQL_ROOT_PASSWORD=
+        - MYSQL_ROOT_PASSWORD=yes
         - MYSQL_DATABASE=achatdb
     ports:
-      - 3307:3306
+      - 3306:3306
     volumes:
       - db:/var/lib/mysql
   Achat-backend:
@@ -26,9 +26,7 @@ services:
         “spring. jpa.properties.hibernate.dialect": “org.hibernate.dialect.MySQL5InnoDBDialect",
         “spring.jpa.hibernate.ddl-auto": "update"
         }'
-
     stdin_open: true
     tty: true
-
 volumes:
   db:
