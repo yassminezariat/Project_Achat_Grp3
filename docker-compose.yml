@@ -13,7 +13,7 @@ services:
   Achat-backend:
     depends_on:
       - mysqldb
-    image: yassminezariat/achat:1.0.0
+    image: youssefelmili/project_achat_grp3:1.0.0
     restart: on-failure
     ports:
         - 8089:8089
